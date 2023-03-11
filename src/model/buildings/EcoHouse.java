@@ -4,17 +4,11 @@ import model.PlayerModel;
 
 import context.GameState;
 
-/**
- * 
- * 居民房 1-5级 平房 店铺 商场 商业大楼 摩天大楼
- * 
- * @author MOVELIGHTS
- * 
- */
+
 public class EcoHouse extends EcoPark {
 
 	private int upPrice;
-	private String[] nameString = { "空地", "平房", "店铺", "商场", "商业大楼", "摩天大楼" };
+	private String[] nameString = { "open space", "bungalow", "store", "mall", "commercial building", "mo d building" };
 
 	private PlayerModel player;
 
@@ -32,12 +26,7 @@ public class EcoHouse extends EcoPark {
 		return upPrice;
 	}
 	
-	/**
-	 * 
-	 * 获取房屋总价值
-	 * 
-	 * @return
-	 */
+	
 	public int getEcoParkAllPrice() {
 		int price = 0;
 		for (int i = 0; i <= ecoParkLevel; i++) {
@@ -50,29 +39,19 @@ public class EcoHouse extends EcoPark {
 		return price;
 	}
 
-	/**
-	 * 税率
-	 * 
-	 * @return
-	 */
+	
 	public int getEcoParkRevenue() {
-		/**
-		 * 税率计算方法
-		 */
+		
 		this.ecoParkRevenue = this.ecoParkLevel * (int) (Math.random() * 1000)
 				+ (this.ecoParkLevel * 300);
 		return ecoParkRevenue;
 	}
 
-	public String getEcoHospitalName() {
+	public String getEcoPark() {
 		return this.nameString[this.ecoParkLevel];
 	}
 
-	/**
-	 * 获得上一级名称
-	 * 
-	 * @return
-	 */
+	
 	public String getUpName() {
 		if (this.ecoParkLevel >= this.nameString.length - 1) {
 			return "null";

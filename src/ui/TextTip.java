@@ -22,13 +22,7 @@ import control.GameRunning;
 
 import model.TextTipModel;
 
-/**
- * 
- * 信息提示框
- * 
- * @author MOVELIGHTS
- * 
- */
+
 public class TextTip extends Layer {
 
 	private TextTipModel textTip = null;
@@ -46,15 +40,11 @@ public class TextTip extends Layer {
 
 	@Override
 	public void paint(Graphics g) {
-		// 绘制信息面板
+
 		paintTextTip(g, this);
 	}
 
-	/**
-	 * 
-	 * 绘制信息面板
-	 * 
-	 */
+	
 	private void paintTextTip(Graphics g, TextTip textTip2) {
 		if (textTip.getStartTick() < textTip.getNowTick()
 				&& textTip.getNextTick() >= textTip.getNowTick()) {
@@ -63,17 +53,13 @@ public class TextTip extends Layer {
 			g.drawImage(bg, pointWindow.x, pointWindow.y, pointWindow.x + bg.getWidth(null),
 					pointWindow.y + bg.getHeight(null), 0, 0, bg.getWidth(null),
 					bg.getHeight(null), null);
-			// 绘制文字
+
 			drawSting(g);
 		}
 
 	}
 
-	/**
-	 * 
-	 * 绘制文字
-	 * 
-	 */
+	
 	private void drawSting(Graphics g) {
 		FontMetrics fm = g.getFontMetrics();
 		String str = this.textTip.getTipString();
@@ -87,7 +73,7 @@ public class TextTip extends Layer {
 			}
 			char[] temp = new char[maxSize];
 			str.getChars(front, rear, temp, 0);
-			// Char[] 转换成string
+
 			String s = new String(temp);
 			g.drawString(s, pointWindow.x + 20, pointWindow.y + posY);
 			front = rear;

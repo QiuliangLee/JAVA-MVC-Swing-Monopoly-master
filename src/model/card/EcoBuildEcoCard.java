@@ -4,18 +4,13 @@ import context.GameState;
 
 import model.PlayerModel;
 
-/**
- * 
- * 加盖卡,当前房屋加盖一层
- * OK
- * 
- */
-public class AddLevelCard extends Card {
 
-	public AddLevelCard(PlayerModel owner) {
+public class EcoBuildEcoCard extends EcoCard {
+
+	public EcoBuildEcoCard(PlayerModel owner) {
 		super(owner);
-		this.name = "AddLevelCard";
-		this.cName = "加盖卡";
+		this.name = "EcoBuildCard";
+		this.cName = "EcoBuildCard";
 		this.price = 30;
 
 	}

@@ -5,66 +5,32 @@ import java.awt.Image;
 import model.PlayerModel;
 
 
-public abstract class Card {
+public abstract class EcoCard {
 
-	/**
-	 * 
-	 * 卡片英文名字
-	 * 
-	 */
+	
 	protected String name;
-	/**
-	 * 
-	 * 卡片中文名字
-	 * 
-	 */
+	
 	protected String cName;
 	
-	/**
-	 * 
-	 * 卡片图片
-	 * 
-	 */
+	
 	protected Image img;
 	
-	/**
-	 * 
-	 * 拥有者
-	 * 
-	 * 
-	 */
+	
 	protected PlayerModel owner;
 	
-	/**
-	 * 
-	 * 作用对象
-	 * 
-	 */
+	
 	protected PlayerModel eOwner;
 	
-	/**
-	 * 
-	 * 卡片价格
-	 * 
-	 */
+	
 	protected int price = 100;
 	
-	protected Card (PlayerModel owner) {
+	protected EcoCard(PlayerModel owner) {
 		this.owner =owner;
 	}
 	
-	/**
-	 * 
-	 * 使用卡片效果
-	 * 
-	 * 
-	 */
+	
 	public abstract int useCard ();
-	/**
-	 * 
-	 *  卡片持续效果
-	 * 
-	 */
+	
 	public int cardBuff(){ return 0;}
 
 

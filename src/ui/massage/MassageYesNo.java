@@ -34,9 +34,9 @@ public class MassageYesNo extends Massage {
 	
 	public MassageYesNo(String titile,String information,JPanelGame panel) {
 		super(titile, panel);
-		// 增加按钮
+
 		addButtons();
-		// 增加文本域
+
 		addTextArea();
 		this.textArea.setText(information);
 	}

@@ -7,26 +7,14 @@ import javax.swing.ImageIcon;
 
 import control.Control;
 
-/**
- * 
- * 事件信息
- * 
- * @author MOVELIGHTS
- * 
- */
+
 public class EffectModel extends Tick implements Port {
 
 	Point loction = new Point(0,0);
 	
-	/**
-	 * 显示图片源
-	 */
+	
 	private Image[] img = null;
-	/**
-	 * 
-	 * 火眼效果开始
-	 * 
-	 */
+	
 	private Image[] imgStart1 = {
 			 new ImageIcon("images/effect/start1/0.png").getImage(),
 			 new ImageIcon("images/effect/start1/1.png").getImage(),
@@ -45,11 +33,7 @@ public class EffectModel extends Tick implements Port {
 			 new ImageIcon("images/effect/start1/14.png").getImage()
 	};
 	
-	/**
-	 * 
-	 * WIN效果
-	 * 
-	 */
+	
 	private Image[] win = {
 			 new ImageIcon("images/effect/win/0.png").getImage(),
 			 new ImageIcon("images/effect/win/1.png").getImage(),
@@ -66,11 +50,7 @@ public class EffectModel extends Tick implements Port {
 			 new ImageIcon("images/effect/win/12.png").getImage(),
 			 new ImageIcon("images/effect/win/13.png").getImage()
 	};
-	/**
-	 * 
-	 * 圆滑效果开始
-	 * 
-	 */
+	
 	private Image[] imgStart2 = {
 			 new ImageIcon("images/effect/start2/0.png").getImage(),
 			 new ImageIcon("images/effect/start2/1.png").getImage(),
@@ -84,11 +64,7 @@ public class EffectModel extends Tick implements Port {
 			 new ImageIcon("images/effect/start2/9.png").getImage(),
 			 new ImageIcon("images/effect/start2/10.png").getImage()
 	};
-	/**
-	 * 
-	 * 游戏结束效果开始
-	 * 
-	 */
+	
 	private Image[] timeover = {
 			 new ImageIcon("images/effect/timeover/0.png").getImage(),
 			 new ImageIcon("images/effect/timeover/1.png").getImage(),
@@ -110,11 +86,7 @@ public class EffectModel extends Tick implements Port {
 			 
 	};
 	
-	/**
-	 * 
-	 * 游戏结束效果开始
-	 * 
-	 */
+	
 	private Image[] timeover2 = {
 			 new ImageIcon("images/effect/timeover2/0.png").getImage(),
 			 new ImageIcon("images/effect/timeover2/1.png").getImage(),
@@ -131,11 +103,7 @@ public class EffectModel extends Tick implements Port {
 			 new ImageIcon("images/effect/timeover2/12.png").getImage(),
 			 new ImageIcon("images/effect/timeover2/13.png").getImage()
 	};
-	/**
-	 * 
-	 * 游戏结束效果开始
-	 * 
-	 */
+	
 	private Image[] win_ = {
 			 new ImageIcon("images/effect/win_/0.png").getImage(),
 			 new ImageIcon("images/effect/win_/1.png").getImage(),
@@ -152,11 +120,7 @@ public class EffectModel extends Tick implements Port {
 			 new ImageIcon("images/effect/win_/12.png").getImage(),
 			 new ImageIcon("images/effect/win_/13.png").getImage()
 	};
-	/**
-	 * 
-	 * 游戏结束效果开始
-	 * 
-	 */
+	
 	private Image[] lose_ = {
 			new ImageIcon("images/effect/lose_/0.png").getImage(),
 			 new ImageIcon("images/effect/lose_/1.png").getImage(),
@@ -173,16 +137,10 @@ public class EffectModel extends Tick implements Port {
 			 new ImageIcon("images/effect/lose_/12.png").getImage()
 	};
 	
-	/**
-	 * 每张图片显示间隔 （/帧数）
-	 */
+	
 	private int imageShowGap = 3;
 	
-	/**
-	 * 
-	 * 显示图片
-	 * 
-	 */
+	
 	public void showImg(String effectName) {
 		if (effectName.equals("start")){
 			this.img = imgStart2;

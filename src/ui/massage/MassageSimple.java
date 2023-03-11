@@ -34,9 +34,9 @@ public class MassageSimple extends Massage {
 	public MassageSimple(String titile,String information,JPanelGame panel) {
 		super(titile, panel);
 		this.titileStr = titile;
-		// 增加按钮
+
 		addButtons();
-		// 增加文本域
+
 		addTextArea();
 	}
 

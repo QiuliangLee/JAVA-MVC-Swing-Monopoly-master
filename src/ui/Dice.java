@@ -10,13 +10,7 @@ import control.Control;
 import model.DiceModel;
 
 
-/**
- * 
- * 骰子掷点层
- * 
- * @author MOVELIGHTS
- * 
- */
+
 @SuppressWarnings("serial")
 public class Dice extends Layer {
 
@@ -36,23 +30,19 @@ public class Dice extends Layer {
 
 	@Override
 	public void paint(Graphics g) {
-		//窗口绘制
+
 		this.createWindow(g);
-		//骰子绘制
+
 		this.paintDice(g, -12, -15);
-		//骰子按钮显示
+
 		this.showDice();
-		// 骰子按钮刷新
+
 		diceButton.update(g);
 	}
 
-	/**
-	 * 
-	 * 骰子绘制
-	 * 
-	 */
+	
 	private void paintDice(Graphics g, int i, int j) {
-		// 设置骰子运动
+
 		if (dice.getStartTick() < dice.getNowTick()
 				&& dice.getNextTick() >= dice.getNowTick()) {
 			dice.setDiceState(DiceModel.DICE_RUNNING);
@@ -74,11 +64,7 @@ public class Dice extends Layer {
 		return diceButton;
 	}
 
-	/**
-	 * 
-	 * 骰子运动状态绘制
-	 * 
-	 */
+	
 	public void paintRunning(Graphics g, int x, int y, boolean change) {
 		if (change) {
 			dice.addImgCount(1);
@@ -89,11 +75,7 @@ public class Dice extends Layer {
 				temp.getHeight(null), null);
 	}
 
-	/**
-	 * 
-	 * 骰子产生点数绘制
-	 * 
-	 */
+	
 	public void paintPoint(Graphics g, int x, int y) {
 		Image temp = dice.getDicePoints()[dice.getPoint()];
 		g.drawImage(temp, x, y, x + temp.getWidth(null),
@@ -101,11 +83,7 @@ public class Dice extends Layer {
 				temp.getHeight(null), null);
 	}
 
-	/**
-	 * 
-	 * 骰子按钮显示
-	 * 
-	 */
+	
 	private void showDice() {
 		diceButton.setEnabled(dice.isShowDiceLabel());
 	}

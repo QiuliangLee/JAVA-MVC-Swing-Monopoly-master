@@ -11,28 +11,14 @@ import model.buildings.Point;
 
 import control.Control;
 
-/**
- * 
- * 事件信息
- * 
- * @author MOVELIGHTS
- * 
- */
+
 public class EventsModel extends Tick implements Port {
 
-	/**
-	 * 显示图片源
-	 */
+	
 	private Image img = null;
-	/**
-	 * 
-	 * 半透明背景覆盖图 黑色
-	 * 
-	 */
+	
 	private Image BG_BRACK = new ImageIcon("images/event/bg_brack.png").getImage();
-	/**
-	 * 图片显示位置
-	 */
+	
 	private Point imgPoint = null;
 	private boolean imgShow = false;
 
@@ -53,11 +39,7 @@ public class EventsModel extends Tick implements Port {
 		return imgShow;
 	}
 
-	/**
-	 * 
-	 * 显示图片
-	 * 
-	 */
+	
 	public void showImg(Image img, int time, Point point) {
 		this.img = img;
 		this.imgPoint = point;
